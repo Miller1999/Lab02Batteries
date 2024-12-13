@@ -38,7 +38,10 @@
 
 # software binary files
 
+
+
 */
+!src/
 *.bak
 !/*.gitignore
 ##
@@ -56,5 +59,6 @@
 ## tbd
 
 !*.tcl
+
 
 # End of https://www.toptal.com/developers/gitignore/api/alteraquartusii
