@@ -38,7 +38,8 @@
 
 # software binary files
 
-/*
+*/
+*.bak
 !/*.gitignore
 ##
 !*.qpf
