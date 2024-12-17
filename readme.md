@@ -33,6 +33,21 @@ Se nos plantea la problemática de la necesidad de implementar un sistema de mon
 un sensor de tensión que convierte valores decimales de 0 a 15 a binario según el nivel de carga de cada batería, siendo (0000) completamente descargada (0 en decimal) y (1111) completamente
 cargada (15 en decimal).
 
+Para lo solución de la problemática se postulan los siguientes requisitos:
+
+1. Detección de baterías descargadas: Si una de las baterías tiene una carga de 0 (4'b0000), debe generarse una señal de advertencia para así poderla atender.
+
+2. Aviso de carga crítica: Si la carga total del banco de baterías es igual o menor que el 10% de la carga máxima, se debe activar una señal de advertencia, ya sea visual, auditiva o ambas. Para cumplir este requisito es necesario revisar la siguiente documentación.
+
+3. Otros niveles de carga: Se debe agregar al sistema otros indicadores para informar niveles de carga de interés, por ejemplo, nivel aceptable, regular y crítico.
+
+4. Implementación modular escalable: El diseño completo debe constar de varios módulos para hacer el sistema escalable y claro, lo que facilitará también su validación y verificación. Cada grupo tendrá la libertad de decidir cómo organizar y conectar los módulos.
+
+Para el primer requisito se crea un modulo cuyo objetivo es el de detectar cuando una batería esta descargada, para esto se crean dos entradas de cuatro bits que representan los niveles de carga obtenidos por el sensor para cada batería y dos salidas que representan 
+la advertencia cuando se cumple que la carga de alguna batería es 0. Se usa "assign" para definir las salidas como combinacionales lo que quiere decir que estas salidas dependen directamente de la entrada, no hay almacenamiento de datos, por decirlo asi, el procedimiento se realiza en tiempo real a medida que las entradas varían.
+
+
+
 ### Diagramas
 
 ## Simulaciones
