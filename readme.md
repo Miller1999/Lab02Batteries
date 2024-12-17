@@ -58,19 +58,25 @@ cargada (15 en decimal).
 ## Preguntas
 
 1. ¿Qué desafíos pueden surgir al implementar en *hardware* un diseño que funcionaba correctamente en simulación?
+   
 En primera instancia en este caso particular se presentó la problemática de la lógica negada presente en el Cyclone IV, la cual invertía los bits, haciendo que en la práctica obtuvieramos justamente lo contrario a las simulaciones.
-Por otro lado 
-    
+Por otro lado, no presentamos más inconvenientes para el diseño de esta práctica, pero a la hora de manejar circuitos eléctricos es muy común que obtengamos resultados distintos entre simulación e implementación, esto es debido a varios factores
+obviando erroes cometidos por manipulación del circuito.
 
-3. Describa el enfoque estructural y comportamental en el contexto de electrónica digital y cómo los implementó en el reto. ¿Qué hace Quartus con cada uno?
+El primer factor son cuestiones ambientales como la temperatura la cual puede afectar la corriente dado que puede variar la resistencia de algunos elementos. 
 
-4. ¿Cómo afecta el diseño del sumador y de comparadores al uso de recursos en la FPGA (LUTs, FFs, BRAMs, etc.)? Muestren el uso de recursos de su diseño.
+Por otro lado podemos tener en cuenta factores inevitables como los modelos de los elementos. Los elementos usados académicamente tienden a tener valores característicos significativamente variables entre si y también respecto a los modelos
+que podemos usar en los simuladores, restando precisión en la realidad.
 
-5. ¿Qué impacto tiene aumentar el número de bits de la lectura de cada batería? ¿Qué impacto tiene aumentar el número de baterias del banco? 
+2.. Describa el enfoque estructural y comportamental en el contexto de electrónica digital y cómo los implementó en el reto. ¿Qué hace Quartus con cada uno?
 
-6. Describa las diferencias entre los tipos de dato ```wire``` y  ```reg``` en Verilog y compare ambos con el tipo de dato ```logic``` en System Verilog.
+3.. ¿Cómo afecta el diseño del sumador y de comparadores al uso de recursos en la FPGA (LUTs, FFs, BRAMs, etc.)? Muestren el uso de recursos de su diseño.
 
-7. Únicamente con lo que se vio en clase, describa cómo se usó el bloque ```always```. Enfoque su respuesta hacia la implementación de lógica combinacional.
+4. ¿Qué impacto tiene aumentar el número de bits de la lectura de cada batería? ¿Qué impacto tiene aumentar el número de baterias del banco? 
+
+5. Describa las diferencias entre los tipos de dato ```wire``` y  ```reg``` en Verilog y compare ambos con el tipo de dato ```logic``` en System Verilog.
+
+6. Únicamente con lo que se vio en clase, describa cómo se usó el bloque ```always```. Enfoque su respuesta hacia la implementación de lógica combinacional.
 
 ## Conclusiones
 
