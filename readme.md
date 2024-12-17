@@ -87,6 +87,12 @@ que podemos usar en los simuladores, restando precisión en la realidad.
 
 3. ¿Cómo afecta el diseño del sumador y de comparadores al uso de recursos en la FPGA (LUTs, FFs, BRAMs, etc.)? Muestren el uso de recursos de su diseño.
 
+Estos términos son comunes en la implementación de una FPGA ya que son básicos para el diseño de FPGA, partiendo por los LUTSs que hacen referencia a tablas de consulta (similar a una tabla de verdad), es decir, que combinaciones de entrada generan salidas específicas. Se usa para lógica combinatoria, por ende, podemos aplicarlo en la lógica de un sumador o de comparadores ya que las salidas no dependen del estado previo o del historial del sistema. En nuestro diseño usamos esta herramienta para diseñar el sumador de 1 bit en ```Sumador1Bit.v``` haciendo operaciones lógicas de suma y acarreo con XOR, AND y OR. De igual manera en ```NivelesCarga.V``` se usaron para la sección de comparaciones de magnitud entre las cargas totales y asi, devolver un nivel de batería.
+
+
+
+
+
 4. ¿Qué impacto tiene aumentar el número de bits de la lectura de cada batería? ¿Qué impacto tiene aumentar el número de baterias del banco? 
 
 Originalmente tenemos un máximo de 4 bits para la lectura de cada bateria, es decir, un valor máximo de carga de 15 decimal, pero este valor es arbitrario ya que es contraintuitivo hablar de carga de una batería sin usar porcentajes de 0 a 100 como es el estándar,
