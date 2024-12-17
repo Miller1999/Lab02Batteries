@@ -95,11 +95,10 @@ no afectaría en nada, ya que simplemente estas lecturas realizadas con más bit
 
 5. Describa las diferencias entre los tipos de dato ```wire``` y  ```reg``` en Verilog y compare ambos con el tipo de dato ```logic``` en System Verilog.
 
-Las diferencias entre wire y reg es que wire se usa para representar conexiones de cableado, es decir, es una representación de cables físicos, no posee la cualidad de almacenar valores y se usa en asignaciones continuas "assign", por otro lado, reg
-como su nombre lo dice, no es un registro de hardware, representa elementos de almacenamiento de datos, es decir, describe lógica secuencial y se usa en asignaciones procedurales con "always".
+Las diferencias entre ```wire``` y ```reg``` es que wire se usa para representar conexiones de cableado, es decir, es una representación de cables físicos, no posee la cualidad de almacenar valores y se usa en asignaciones continuas ```assign```, por otro lado, ```reg```  como su nombre lo dice, no es un registro de hardware, representa elementos de almacenamiento de datos, es decir, describe lógica secuencial y se usa en asignaciones procedurales con ```always```.
 
-El tipo de dato logic unifica wire y reg eliminando las confusiones para desencadenar un código mas sencillo y robusto. Este tipo de dato permite asignaciones procedurales "always" y continuas "assign", eliminando las barreras entre wire y reg, permitiendo almacenamiento y permitiendo describir lógica combinacional
-como wire pero sin representar puramente un cable físico 
+El tipo de dato ```logic``` unifica ```wire``` y ```reg``` eliminando las confusiones para desencadenar un código mas sencillo y robusto. Este tipo de dato permite asignaciones procedurales ```always``` y continuas ```assign```, eliminando las barreras entre ```wire``` y ```reg```, permitiendo almacenamiento y permitiendo describir lógica combinacional
+como ```wire``` pero sin representar puramente un cable físico 
 
 6. Únicamente con lo que se vio en clase, describa cómo se usó el bloque ```always```. Enfoque su respuesta hacia la implementación de lógica combinacional.
 
