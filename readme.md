@@ -114,3 +114,5 @@ como ```wire``` pero sin representar puramente un cable físico
 ## Conclusiones
 
 ## Referencias
+
+- [Sumador](https://github.com/digital-electronics-UNAL/2024-2/blob/main/labs/lab02/sumador.md)
