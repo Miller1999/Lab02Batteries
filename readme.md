@@ -89,6 +89,7 @@ como wire pero sin representar puramente un cable físico
 6. Únicamente con lo que se vio en clase, describa cómo se usó el bloque ```always```. Enfoque su respuesta hacia la implementación de lógica combinacional.
 
 
+
 ## Conclusiones
 
 ## Referencias
