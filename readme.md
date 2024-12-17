@@ -68,11 +68,16 @@ El primer factor son cuestiones ambientales como la temperatura la cual puede af
 Por otro lado podemos tener en cuenta factores inevitables como los modelos de los elementos. Los elementos usados académicamente tienden a tener valores característicos significativamente variables entre si y también respecto a los modelos
 que podemos usar en los simuladores, restando precisión en la realidad.
 
-2.. Describa el enfoque estructural y comportamental en el contexto de electrónica digital y cómo los implementó en el reto. ¿Qué hace Quartus con cada uno?
+2. Describa el enfoque estructural y comportamental en el contexto de electrónica digital y cómo los implementó en el reto. ¿Qué hace Quartus con cada uno?
 
-3.. ¿Cómo afecta el diseño del sumador y de comparadores al uso de recursos en la FPGA (LUTs, FFs, BRAMs, etc.)? Muestren el uso de recursos de su diseño.
+3. ¿Cómo afecta el diseño del sumador y de comparadores al uso de recursos en la FPGA (LUTs, FFs, BRAMs, etc.)? Muestren el uso de recursos de su diseño.
 
 4. ¿Qué impacto tiene aumentar el número de bits de la lectura de cada batería? ¿Qué impacto tiene aumentar el número de baterias del banco? 
+
+Originalmente tenemos un máximo de 4 bits para la lectura de cada bateria, es decir, un valor máximo de carga de 15 decimal, pero este valor es arbitrario ya que es contraintuitivo hablar de carga de una batería sin usar porcentajes de 0 a 100 como es el estándar,
+podríamos asumir que esto se hace para facilitar el análisis, y cada valor obtenido a partir de los 4 bits es una representación de la carga de la batería. En base a lo planteado anteriormente al aumentar el número de bits de la lectura podriamos decir que 
+no afectaría en nada, ya que simplemente estas lecturas realizadas con más bits implicarían un tipo distinto de relación al que se tenia anteriormente, es decir, si por ejemplo usamos 5 bits, el valor máximo decimal sería 31, que al igual que el 15 con 4 bits, seguiría siendo un valor obtenido del sensor de de tensión que representa un nivel de carga total. Respecto a aumentar el número de baterias del banco afectaría la sección de niveles de batería, ya que ahora el 30 decimal no sería el máximo sino 45,60,75,etc a medida que aumentamos las baterías del banco, lo que tendría que verse reflejado en el código del sistema de monitoreo. En caso que no se realice ningún cambio en el código, el sistema no reaccionará ante los nuevos niveles de batería y solo manejará los originales.
+
 
 5. Describa las diferencias entre los tipos de dato ```wire``` y  ```reg``` en Verilog y compare ambos con el tipo de dato ```logic``` en System Verilog.
 
