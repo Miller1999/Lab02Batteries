@@ -89,8 +89,9 @@ que podemos usar en los simuladores, restando precisión en la realidad.
 
 Estos términos son comunes en la implementación de una FPGA ya que son básicos para el diseño de FPGA, partiendo por los LUTSs que hacen referencia a tablas de consulta (similar a una tabla de verdad), es decir, que combinaciones de entrada generan salidas específicas. Se usa para lógica combinatoria, por ende, podemos aplicarlo en la lógica de un sumador o de comparadores ya que las salidas no dependen del estado previo o del historial del sistema. En nuestro diseño usamos esta herramienta para diseñar el sumador de 1 bit en ```Sumador1Bit.v``` haciendo operaciones lógicas de suma y acarreo con XOR, AND y OR. De igual manera en ```NivelesCarga.V``` se usaron para la sección de comparaciones de magnitud entre las cargas totales y asi, devolver un nivel de batería.
 
+Respecto a los FFs (Flip-Flops) a diferencia de los LUTs, son usados para almacenar valores, es decir, siguen la lógica secuencial. En nuestro caso no usamos lógica secuencial ya que el código se puede hacer con lógica combinacional dado que las salidas que obtenemos son en función de entradas en tiempo real, no es de interés valores pasados.
 
-
+Las BRAM (Block RAM) son un bloque de memoria clave que se suele usar en aplicaciones donde se necesita almacenar gran cantidad de datos que no pueden ser manejados por registros simples. En nuestro caso manejamos entradas de 4 bits, es decir, entradas con poca cantidad de datos, por lo cual no se usa BRAM, pero podría usarse si por ejemplo deseáramos almacenear datos como una tabla de carga total de las baterías en función del tiempo.
 
 
 4. ¿Qué impacto tiene aumentar el número de bits de la lectura de cada batería? ¿Qué impacto tiene aumentar el número de baterias del banco? 
