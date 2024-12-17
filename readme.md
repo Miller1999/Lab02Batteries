@@ -78,10 +78,16 @@ Originalmente tenemos un máximo de 4 bits para la lectura de cada bateria, es d
 podríamos asumir que esto se hace para facilitar el análisis, y cada valor obtenido a partir de los 4 bits es una representación de la carga de la batería. En base a lo planteado anteriormente al aumentar el número de bits de la lectura podriamos decir que 
 no afectaría en nada, ya que simplemente estas lecturas realizadas con más bits implicarían un tipo distinto de relación al que se tenia anteriormente, es decir, si por ejemplo usamos 5 bits, el valor máximo decimal sería 31, que al igual que el 15 con 4 bits, seguiría siendo un valor obtenido del sensor de de tensión que representa un nivel de carga total. Respecto a aumentar el número de baterias del banco afectaría la sección de niveles de batería, ya que ahora el 30 decimal no sería el máximo sino 45,60,75,etc a medida que aumentamos las baterías del banco, lo que tendría que verse reflejado en el código del sistema de monitoreo. En caso que no se realice ningún cambio en el código, el sistema no reaccionará ante los nuevos niveles de batería y solo manejará los originales.
 
-
 5. Describa las diferencias entre los tipos de dato ```wire``` y  ```reg``` en Verilog y compare ambos con el tipo de dato ```logic``` en System Verilog.
 
+Las diferencias entre wire y reg es que wire se usa para representar conexiones de cableado, es decir, es una representación de cables físicos, no posee la cualidad de almacenar valores y se usa en asignaciones continuas "assign", por otro lado, reg
+como su nombre lo dice, no es un registro de hardware, representa elementos de almacenamiento de datos, es decir, describe lógica secuencial y se usa en asignaciones procedurales con "always".
+
+El tipo de dato logic unifica wire y reg eliminando las confusiones para desencadenar un código mas sencillo y robusto. Este tipo de dato permite asignaciones procedurales "always" y continuas "assign", eliminando las barreras entre wire y reg, permitiendo almacenamiento y permitiendo describir lógica combinacional
+como wire pero sin representar puramente un cable físico 
+
 6. Únicamente con lo que se vio en clase, describa cómo se usó el bloque ```always```. Enfoque su respuesta hacia la implementación de lógica combinacional.
+
 
 ## Conclusiones
 
