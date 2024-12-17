@@ -116,3 +116,4 @@ como ```wire``` pero sin representar puramente un cable físico
 ## Referencias
 
 - [Sumador](https://github.com/digital-electronics-UNAL/2024-2/blob/main/labs/lab02/sumador.md)
+- [Cyclone IV EP4CE10E22C8N](https://www.intel.la/content/www/xl/es/content-details/654630/cyclone-iv-device-handbook-volume-1-chapter-1-fpga-device-family-overview.html)
