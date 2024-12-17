@@ -1,3 +1,5 @@
+`include "src/Sumador1Bit.v"
+
 module SumaCarga (
     input [3:0] carga_bateria1,  
     input [3:0] carga_bateria2,  

@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+`include "src/DetectarBateriasDescargadas.v"
 
 
 module DetectarBateriasDescargada_tb;
@@ -10,7 +11,7 @@ module DetectarBateriasDescargada_tb;
     wire advertencia_bateria_2;  // Advertencia para la batería 2
 
     // Instanciación del módulo bajo prueba (DUT)
-    DetectarBateriasDescargada dut (
+    DetectarBateriasDescargadas dut (
         .carga_bateria1(carga_bateria1),
         .carga_bateria2(carga_bateria2),
         .advertencia_bateria_1(advertencia_bateria_1),

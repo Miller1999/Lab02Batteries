@@ -1,4 +1,4 @@
-module DetectarBateriasDescargada(
+module DetectarBateriasDescargadas(
     input[3:0] carga_bateria1,
     input[3:0] carga_bateria2,
     output advertencia_bateria_1,
