@@ -46,7 +46,7 @@ Para lo solución de la problemática se postulan los siguientes requisitos:
 Para el primer requisito se crea un modulo cuyo objetivo es el de detectar cuando una batería esta descargada, para esto se crean dos entradas de cuatro bits que representan los niveles de carga obtenidos por el sensor para cada batería y dos salidas que representan 
 la advertencia cuando se cumple que la carga de alguna batería es 0. Se usa "assign" para definir las salidas como combinacionales lo que quiere decir que estas salidas dependen directamente de la entrada, no hay almacenamiento de datos, por decirlo asi, el procedimiento se realiza en tiempo real a medida que las entradas varían.
 
-Para el segundo requisito se debe activar una señal de alerta cuando la batería total sea igual o menos al 10%, por lo cual es necesario hacer un sumador que sume la carga de cada batería y en base a eso se realiza el procedimiento. Para el modulo del sumador bit a bit recibe tres entradas (A,B y Cin) y tiene dos salidas (S y Cout)
+Para el segundo requisito se debe activar una señal de alerta cuando la batería total sea igual o menos al 10%, por lo cual es necesario hacer un sumador que sume la carga de cada batería y en base a eso se realiza el procedimiento. Para el modulo del sumador bit a bit recibe tres entradas (A,B y Cin) y tiene dos salidas (S y Cout) 
 
 
 ### Diagramas
