@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-
+`include "src/MonitorizacionBateria.v"
 
 module MonitorizacionBateria_tb;
 

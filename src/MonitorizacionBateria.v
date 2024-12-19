@@ -1,3 +1,6 @@
+`include "src/DetectarBateriasDescargadas.v"
+`include "src/NivelesCarga.v"
+
 module MonitorizacionBateria (
     input [3:0] carga_bateria1,
     input [3:0] carga_bateria2,
@@ -13,7 +16,7 @@ module MonitorizacionBateria (
     wire [4:0] carga_total;
 
     // Instancia del módulo DetectarBateriasDescargada
-    DetectarBateriasDescargada detectar_inst (
+    DetectarBateriasDescargadas detectar_inst (
         .carga_bateria1(carga_bateria1),
         .carga_bateria2(carga_bateria2),
         .advertencia_bateria_1(advertencia_bateria_1),

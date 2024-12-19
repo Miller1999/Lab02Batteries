@@ -1,3 +1,5 @@
+`include "src/SumaCarga.v"
+
 module NivelesCarga (
     input [3:0] carga_bateria1,
     input [3:0] carga_bateria2,

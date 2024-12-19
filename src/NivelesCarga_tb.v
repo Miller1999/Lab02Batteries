@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "src/NivelesCarga.v"
 
 module NivelesCarga_tb;
     // Entradas
